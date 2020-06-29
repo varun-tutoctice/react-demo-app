@@ -6,7 +6,7 @@ import "./App.css";
 import AddArtifact from "./components/add-artifact.component";
 import Artifact from "./components/artifact.component";
 import ArtifactList from "./components/artifacts-list.component";
-import Login from "./components/login.component";
+// import Login from "./components/login.component";
 
 class App extends Component {
   render() {
@@ -34,8 +34,9 @@ class App extends Component {
 
           <div className="container mt-3">
             <Switch>
-            <Route exact path={["/", "/login"]} component={Login} />
-              <Route exact path="/add" component={AddArtifact} />
+            {/* <Route exact path={["/", "/login"]} component={Login} /> */}
+            <Route exact path={["/", "/add"]} component={AddArtifact} />
+              {/* <Route exact path="/add" component={AddArtifact} /> */}
               <Route exact path="/artifacts" component={ArtifactList} />
               <Route path="/artifacts/:id" component={Artifact} />
             </Switch>
