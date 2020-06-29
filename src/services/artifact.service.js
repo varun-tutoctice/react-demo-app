@@ -30,6 +30,15 @@ class ArtifactDataService {
     console.log(title);
     return http.get(`/attachment?filter[where][title]=${title}`);
   }
+
+
+  
+}
+
+export function isLoggedIn() {
+  if (localStorage.getItem("labId")) {
+    return true;
+  }
 }
 
 export default new ArtifactDataService();
